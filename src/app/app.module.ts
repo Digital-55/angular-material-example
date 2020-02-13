@@ -11,6 +11,10 @@ import {MatListModule} from '@angular/material/list';
 import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
 import { FormComponent } from './form/form.component';
+import { MatTableModule } from '@angular/material/table';
+import {MatInputModule} from '@angular/material/input';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { FormComponent } from './form/form.component';
     MatToolbarModule,
     MatSidenavModule,
     MatMenuModule,
-    MatListModule
+    MatListModule,
+    MatTableModule,
+    MatInputModule,
+    MatRadioModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

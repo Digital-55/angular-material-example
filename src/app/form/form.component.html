@@ -1,1 +1,20 @@
-<p>form works!</p>
+<mat-form-field class="full-width">
+    <mat-label>Email</mat-label>
+    <input matInput [formControl]="emailFormControl"
+            placeholder="ejemplo@ejemplo.com">
+</mat-form-field>
+<mat-radio-group
+  aria-labelledby="radio-group-label"
+  class="radio-group"
+  [(ngModel)]="favoriteCountry">
+  <mat-radio-button class="radio-button" *ngFor="let item of countries" [value]="item">
+    {{item}}
+  </mat-radio-button>
+</mat-radio-group>
+<mat-form-field>
+    <mat-select>
+        <mat-option *ngFor="let item of musicGenres" [value]="item.id">
+            {{item.name}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>

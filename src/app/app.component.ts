@@ -9,15 +9,15 @@ export class AppComponent {
   links = [
     {
       name: "Inicio",
-      url: "http://pagina1.com"
+      url: ""
     },
     {
       name: "Lista",
-      url: "http://pagina1.com"
+      url: "list"
     },
     {
       name: "Formulario",
-      url: "http://pagina1.com"
+      url: "form"
     }
   ]
   title = 'angular-material-example';

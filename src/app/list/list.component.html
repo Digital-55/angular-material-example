@@ -1,1 +1,22 @@
-<p>list works!</p>
+<mat-selection-list #listFrameworks>
+    <mat-list-option *ngFor="let item of frameworks">
+        {{item}}
+    </mat-list-option>
+</mat-selection-list>
+
+<table mat-table [dataSource]="languages" class="mat-elevation-z8">
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+    
+    <!-- Weight Column -->
+    <ng-container matColumnDef="created">
+        <th mat-header-cell *matHeaderCellDef> Creation </th>
+        <td mat-cell *matCellDef="let element"> {{element.created}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="dataTitle"></tr>
+    <tr mat-row *matRowDef="let row; columns: dataTitle;"></tr>
+</table>
